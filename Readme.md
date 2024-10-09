@@ -15,7 +15,7 @@ run app with python drumpi.py
 can also add to rc.local for startup headless.
 paste the below line before the exit
 in /etc/rc.local
-sudo -H -u pi /usr/bin/python3 /home/pi/drumpi/drumpi.py &
+sudo -H -u pi /usr/bin/python3 /home/pi/drumPi/drumpi.py &
 
 
 view logs via  tail -f /var/log/syslog
