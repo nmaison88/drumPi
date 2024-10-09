@@ -16,7 +16,7 @@ drop = pygame.mixer.Sound(dirname + '/subdrop.wav')
 if len(sys.argv) > 1:
     portname = sys.argv[1]
 else:
-    portname = None  # Use default port
+    portname = 'USB Midi MIDI 1'  # Use default port
 
 try:
     with mido.open_input(portname) as port:
