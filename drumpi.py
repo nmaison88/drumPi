@@ -11,6 +11,7 @@ dirname = os.path.dirname(os.path.abspath(__file__))
 sound_player = pygame.mixer.Channel(2)
 kick = pygame.mixer.Sound(dirname + '/kick.wav')
 snare = pygame.mixer.Sound(dirname + '/snare.wav')
+drop = pygame.mixer.Sound(dirname + '/subdrop.wav')
 
 if len(sys.argv) > 1:
     portname = sys.argv[1]
@@ -30,6 +31,10 @@ try:
             # play snare sound on d1
             if message.type == 'note_on' and message.note == 38:
                 sound_player.play(snare)
+             # play sub drop sound on a0
+            if message.type == 'note_on' and message.note == 33:
+                sound_player.play(drop)
+
             sys.stdout.flush()
 except KeyboardInterrupt:
     pass
